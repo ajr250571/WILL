@@ -25,7 +25,16 @@ function filtrar(funcion) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
 
-};
+  let result = []
+  for (let index = 0; index < this.length; index++) {
+    const element = this[index];
+    if (funcion(element)) {
+      result.push(element);
+    }
+  }
+  return result
+}
+Array.prototype.filtrar = filtrar
 
 // No modifiques nada debajo de esta linea //
 

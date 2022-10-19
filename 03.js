@@ -14,7 +14,14 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  
+  result = {}
+  amigos.map(x => {
+    if (x.nombre == nombre) {
+      result['nombre'] = x.nombre;
+      result['edad'] = x.edad;
+    }
+  })
+  return result;
 }
 
 // No modifiques nada debajo de esta linea //
