@@ -29,7 +29,7 @@ function filtrar(funcion) {
   for (let index = 0; index < this.length; index++) {
     const element = this[index];
     if (funcion(element)) {
-      result.push(element);
+      result.push(element)
     }
   }
   return result

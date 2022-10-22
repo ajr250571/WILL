@@ -1,14 +1,15 @@
 const filtrar = require('../09.js');
+const { describe, expect, it } = require('@jest/globals')
 
-var personas =[
+var personas = [
   {
     nombre: 'Emi',
     edad: 21,
     hobbies: ['correr', 'dormir', 'nadar'],
     amigos: [
-      { 
+      {
         nombre: 'Martin',
-      },{
+      }, {
         nombre: 'Leo',
       }
     ],
@@ -43,12 +44,12 @@ var personas =[
 ];
 
 
-describe('Filter', function() {
+describe('Filter', function () {
   filtrar();
-  it('should filter', function() {
+  it('should filter', function () {
     expect(personas.filtrar(p => p.edad <= 22).length).toBe(2);
   })
-  it('should filter ok', function() {
+  it('should filter ok', function () {
     expect(personas.filtrar(p => p.edad > 50).length).toBe(0);
   })
 })

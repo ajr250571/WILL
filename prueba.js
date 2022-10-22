@@ -1,20 +1,14 @@
-function stringMasLarga(strings) {
-  // La función llamada 'stringMasLarga', recibe como argumento un arreglo de strings llamado 'strings'
-  // y debe devolver el string más largo que hay en el arreglo (Es decir el de mayor cantidad de caracteres)
-  // Ej:
-  // stringMasLarga(['hi', 'hello', 'ni hao', 'guten tag']); debe retornar 'guten tag'
-  // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
+const pluck = require('./05.js')
 
-  // Tu código aca
-  result = ''
-  largo = 0
-  strings.map(x => {
-    if (x.length > largo) {
-      result = x
-      largo = x.length
-    }
-  })
-  return result
-}
+var productos = [
+  { name: 'TV LCD', price: 100, amount: 4 },
+  { name: 'Computadora', price: 500, amount: 9 },
+  { name: 'Notebook', price: 1500, amount: 2 },
+]
 
-console.log(stringMasLarga(['hi', 'hello', 'ni hao', 'guten tag']))
+productos.push({ name: 'Mouse', price: 3, amount: 29 })
+
+console.log(pluck(productos, 'name'))
+console.log(pluck(productos, 'price'))
+console.log(pluck(productos, 'amount'))
+

@@ -89,7 +89,7 @@ function crearClasePersona() {
 
 
     }
-  };
+  }
 
   return Persona;
 }

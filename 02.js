@@ -12,8 +12,8 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
-  result = ''
-  largo = 0
+  let result = ''
+  let largo = 0
   strings.map(x => {
     if (x.length > largo) {
       result = x
